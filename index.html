@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<link rel="stylesheet" type="text/css" href="css/foundation.css">
+         	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script data-main="js/main" type="text/javascript" src="js/require.js"></script>
+	</head>
+	<body>
+  		HELLO WORLD
+    		<div ng-controller="InvoiceController as invoice">
+			<b>Sample Invoice:</b>
+			<div>
+				Quantity: <input type="number" min="0" ng-model="invoice.qty" required>
+			</div>
+			<div>
+				<b>Total: </b>
+				<span>{{invoice.qty}}</span>
+				<button class="btn" ng-click="invoice.pay()">Pay</button>
+			</div>
+		</div>
+	</body>
+</html>
